@@ -1,0 +1,15 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns1: <http://skosplus.net/skos-light/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+ns1:StructualConcept a owl:Class,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Structural Concept"@en ;
+    dc:license <> ;
+    void:inDataset ns1:skosplus_dataset ;
+    ns1:hasType ns1:StructualConcept ;
+    rdfs:subClassOf <http://www.w3.org/2004/02/skos2/core#Concept> .
+

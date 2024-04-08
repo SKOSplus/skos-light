@@ -48,6 +48,13 @@ var minivowlresult={
  ],
  "links": [
   {
+   "source": 3,
+   "target": 2,
+   "valueTo": "hasType",
+   "propertyTo": "class",
+   "uriTo": "http://skosplus.net/skos-light/hasType"
+  },
+  {
    "source": 6,
    "target": 2,
    "valueTo": "hasType",
@@ -56,13 +63,6 @@ var minivowlresult={
   },
   {
    "source": 7,
-   "target": 2,
-   "valueTo": "hasType",
-   "propertyTo": "class",
-   "uriTo": "http://skosplus.net/skos-light/hasType"
-  },
-  {
-   "source": 3,
    "target": 2,
    "valueTo": "hasType",
    "propertyTo": "class",

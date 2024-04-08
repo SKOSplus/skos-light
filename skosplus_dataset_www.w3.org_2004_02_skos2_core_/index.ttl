@@ -1,0 +1,15 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2004_02_skos2_core_> a void:Linkset,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Linkset: skosplus_dataset - skoso:"@en ;
+    dc:license <> ;
+    void:linkPredicate rdfs:subClassOf ;
+    void:objectsTarget <http://www.w3.org/2004/02/skos2/core#> ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 1 .
+

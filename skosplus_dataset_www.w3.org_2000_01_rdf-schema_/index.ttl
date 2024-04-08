@@ -1,0 +1,16 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2000_01_rdf-schema_> a void:Linkset,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Linkset: skosplus_dataset - The RDF Schema vocabulary (RDFS) (rdfs:)"@en ;
+    dc:license <> ;
+    void:linkPredicate rdf:type ;
+    void:objectsTarget rdfs: ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 1 .
+

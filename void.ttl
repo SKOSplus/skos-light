@@ -1,0 +1,594 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vext: <http://ldf.fi/void-ext#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://skosplus.net/skos-light/adms_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/adms# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/brick_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary https://brickschema.org/schema/Brick# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/csvw_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/csvw# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/dc_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/dc/elements/1.1/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/dcam_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/dc/dcam/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/dcat_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/dcat# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/dcmitype_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/dc/dcmitype/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/dcterms_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/dc/terms/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/doap_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://usefulinc.com/ns/doap# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/foaf_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://xmlns.com/foaf/0.1/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/geo_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.opengis.net/ont/geosparql# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/odrl_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/odrl/2/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/org_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/org# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/owl_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2002/07/owl# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> ;
+    voaf:occurrences 30 .
+
+<http://skosplus.net/skos-light/prof_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/dx/prof/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/prov_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/prov# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/qb_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/linked-data/cube# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/rdf_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/1999/02/22-rdf-syntax-ns# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/rdfs_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2000/01/rdf-schema# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> ;
+    voaf:occurrences 2 .
+
+<http://skosplus.net/skos-light/schema_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary https://schema.org/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/sh_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/shacl# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/skos_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2004/02/skos/core# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> ;
+    voaf:occurrences 6 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_labeling.link_docs_ls_core_> a void:Linkset ;
+    rdfs:label "Linkset: skosplus_dataset - ls:"@en ;
+    void:linkPredicate rdfs:subClassOf ;
+    void:objectsTarget <http://labeling.link/docs/ls/core#> ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 2 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2000_01_rdf-schema_> a void:Linkset ;
+    rdfs:label "Linkset: skosplus_dataset - The RDF Schema vocabulary (RDFS) (rdfs:)"@en ;
+    void:linkPredicate rdf:type ;
+    void:objectsTarget rdfs: ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 1 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2002_07_owl_> a void:Linkset ;
+    rdfs:label "Linkset: skosplus_dataset - Web Ontology Language 2 Vocabulary (owl:)"@en ;
+    void:linkPredicate rdf:type,
+        owl:equivalentClass ;
+    void:objectsTarget owl: ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 1,
+        14 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2004_02_skos2_core_> a void:Linkset ;
+    rdfs:label "Linkset: skosplus_dataset - skoso:"@en ;
+    void:linkPredicate rdfs:subClassOf ;
+    void:objectsTarget <http://www.w3.org/2004/02/skos2/core#> ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 1 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_www.w3.org_2004_02_skos_core_> a void:Linkset ;
+    rdfs:label "Linkset: skosplus_dataset - skos:"@en ;
+    void:linkPredicate rdfs:subPropertyOf ;
+    void:objectsTarget skos: ;
+    void:subjectsTarget <http://skosplus.net/skos-light/skosplus_dataset> ;
+    void:triples 3 .
+
+<http://skosplus.net/skos-light/sosa_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/sosa/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/ssn_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/ns/ssn/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/time_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2006/time# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/vann_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/vocab/vann/ in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/vext_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://ldf.fi/void-ext# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/voaf_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://purl.org/vocommons/voaf# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/void_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://rdfs.org/ns/void# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/wgs_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary https://www.w3.org/2003/01/geo/wgs84_pos# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/xml_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/XML/1998/namespace in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://skosplus.net/skos-light/xsd_skosplus_dataset_occ> a voaf:DatasetOccurrence ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2001/XMLSchema# in skosplus_dataset" ;
+    voaf:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<https://github.com/SKOSplus/skos-light> a adms:AssetRepository ;
+    rdfs:label "Repository for skosplus_dataset"@en ;
+    dcat:accessURL "https://github.com/SKOSplus/skos-light"^^xsd:anyURI ;
+    dcat:dataset <http://skosplus.net/skos-light/skosplus_dataset> .
+
+<http://dbpedia.org/resource/Location> rdfs:label "Location"@en .
+
+<http://dbpedia.org/resource/OGC_GeoSPARQL> rdfs:label "OGC GeoSPARQL"@en .
+
+<http://dbpedia.org/resource/Time> rdfs:label "Time Data"@en .
+
+vext: a voaf:Vocabulary ;
+    rdfs:label "vext Vocabulary"@en ;
+    vann:preferredNamespacePrefix "vext"^^xsd:string ;
+    vann:preferredNamespaceUri "http://ldf.fi/void-ext#"^^xsd:anyURI ;
+    voaf:usageInDataset vext:_skosplus_dataset_occ .
+
+dcam: a voaf:Vocabulary ;
+    rdfs:label "dcam Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dcam"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/dc/dcam/"^^xsd:anyURI ;
+    voaf:usageInDataset dcam:_skosplus_dataset_occ .
+
+dcmitype: a voaf:Vocabulary ;
+    rdfs:label "dcmitype Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dcmitype"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/dc/dcmitype/"^^xsd:anyURI ;
+    voaf:usageInDataset dcmitype:_skosplus_dataset_occ .
+
+dc: a voaf:Vocabulary ;
+    rdfs:label "dc Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dc"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+    voaf:usageInDataset dc:_skosplus_dataset_occ .
+
+dcterms: a voaf:Vocabulary ;
+    rdfs:label "dcterms Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dcterms"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/dc/terms/"^^xsd:anyURI ;
+    voaf:usageInDataset dcterms:_skosplus_dataset_occ .
+
+qb: a voaf:Vocabulary ;
+    rdfs:label "qb Vocabulary"@en ;
+    vann:preferredNamespacePrefix "qb"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/linked-data/cube#"^^xsd:anyURI ;
+    voaf:usageInDataset qb:_skosplus_dataset_occ .
+
+vann: a voaf:Vocabulary ;
+    rdfs:label "vann Vocabulary"@en ;
+    vann:preferredNamespacePrefix "vann"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/vocab/vann/"^^xsd:anyURI ;
+    voaf:usageInDataset vann:_skosplus_dataset_occ .
+
+voaf: a voaf:Vocabulary ;
+    rdfs:label "voaf Vocabulary"@en ;
+    vann:preferredNamespacePrefix "voaf"^^xsd:string ;
+    vann:preferredNamespaceUri "http://purl.org/vocommons/voaf#"^^xsd:anyURI ;
+    voaf:usageInDataset voaf:_skosplus_dataset_occ .
+
+void: a voaf:Vocabulary ;
+    rdfs:label "Vocabulary of Interlinked Datasets (VoID)"@en ;
+    vann:preferredNamespacePrefix "void"^^xsd:string ;
+    vann:preferredNamespaceUri "http://rdfs.org/ns/void#"^^xsd:anyURI ;
+    voaf:usageInDataset void:_skosplus_dataset_occ .
+
+<http://skosplus.net/skos-light/skosplus_dataset_Concept> a void:Dataset ;
+    rdfs:label "Class Partition: Concept"@en ;
+    void:class <http://www.w3.org/2004/02/skos2/core#Concept> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_ConceptScheme> a void:Dataset ;
+    rdfs:label "Class Partition: ConceptScheme"@en ;
+    void:class skos:ConceptScheme .
+
+<http://skosplus.net/skos-light/skosplus_dataset_Label> a void:Dataset ;
+    rdfs:label "Class Partition: Label"@en ;
+    void:class <http://labeling.link/docs/ls/core#Label>,
+        <http://skosplus.net/skos-light/Label> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_StructualConcept> a void:Dataset ;
+    rdfs:label "Class Partition: StructualConcept"@en ;
+    void:class <http://skosplus.net/skos-light/StructualConcept> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_SymmetricProperty> a void:Dataset ;
+    rdfs:label "Class Partition: SymmetricProperty"@en ;
+    void:class owl:SymmetricProperty ;
+    void:entities 1 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_TransitiveProperty> a void:Dataset ;
+    rdfs:label "Class Partition: TransitiveProperty"@en ;
+    void:class owl:TransitiveProperty ;
+    void:entities 2 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_Vocabulary> a void:Dataset ;
+    rdfs:label "Class Partition: Vocabulary"@en ;
+    void:class <http://labeling.link/docs/ls/core#Vocabulary>,
+        <http://skosplus.net/skos-light/Vocabulary> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_comment> a void:Dataset ;
+    rdfs:label "Property Partition: comment"@en ;
+    void:property rdfs:comment ;
+    void:triples 4 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_dist_ttl> a adms:AssetDistribution ;
+    rdfs:label "skosplus_dataset TTL Distribution"@en ;
+    dcat:downloadURL "https://SKOSplus.github.io/skos-light/index.ttl"^^xsd:anyURI ;
+    dcat:mediaType <http://www.w3.org/ns/formats/Turtle> .
+
+<http://skosplus.net/skos-light/skosplus_dataset_domain> a void:Dataset ;
+    rdfs:label "Property Partition: domain"@en ;
+    void:property rdfs:domain ;
+    void:triples 2 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_equivalentClass> a void:Dataset ;
+    rdfs:label "Property Partition: equivalentClass"@en ;
+    void:property owl:equivalentClass ;
+    void:triples 1 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_hasType> a void:Dataset ;
+    rdfs:label "Property Partition: hasType"@en ;
+    void:property <http://skosplus.net/skos-light/hasType> ;
+    void:triples 4 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_isDefinedBy> a void:Dataset ;
+    rdfs:label "Property Partition: isDefinedBy"@en ;
+    void:property rdfs:isDefinedBy ;
+    void:triples 20 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_label> a void:Dataset ;
+    rdfs:label "Property Partition: label"@en ;
+    void:property rdfs:label ;
+    void:triples 21 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_range> a void:Dataset ;
+    rdfs:label "Property Partition: range"@en ;
+    void:property rdfs:range ;
+    void:triples 2 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_subClassOf> a void:Dataset ;
+    rdfs:label "Property Partition: subClassOf"@en ;
+    void:property rdfs:subClassOf ;
+    void:triples 5 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_subPropertyOf> a void:Dataset ;
+    rdfs:label "Property Partition: subPropertyOf"@en ;
+    void:property rdfs:subPropertyOf ;
+    void:triples 24 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_type> a void:Dataset ;
+    rdfs:label "Property Partition: type"@en ;
+    void:property rdf:type ;
+    void:triples 50 .
+
+<http://skosplus.net/skos-light/skosplus_dataset_versionIRI> a void:Dataset ;
+    rdfs:label "Property Partition: versionIRI"@en ;
+    void:property owl:versionIRI ;
+    void:triples 1 .
+
+doap: a voaf:Vocabulary ;
+    rdfs:label "doap Vocabulary"@en ;
+    vann:preferredNamespacePrefix "doap"^^xsd:string ;
+    vann:preferredNamespaceUri "http://usefulinc.com/ns/doap#"^^xsd:anyURI ;
+    voaf:usageInDataset doap:_skosplus_dataset_occ .
+
+geo: a voaf:Vocabulary ;
+    rdfs:label "The GeoSPARQL Ontology"@en ;
+    vann:preferredNamespacePrefix "geo"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.opengis.net/ont/geosparql#"^^xsd:anyURI ;
+    voaf:usageInDataset geo:_skosplus_dataset_occ .
+
+rdf: a voaf:Vocabulary ;
+    rdfs:label "The RDF Concepts Vocabulary (RDF)"@en ;
+    vann:preferredNamespacePrefix "rdf"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    voaf:usageInDataset rdf:_skosplus_dataset_occ .
+
+xsd: a voaf:Vocabulary ;
+    rdfs:label "XML Schema"@en ;
+    vann:preferredNamespacePrefix "xsd"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+    voaf:usageInDataset xsd:_skosplus_dataset_occ .
+
+time: a voaf:Vocabulary ;
+    rdfs:label "time Vocabulary"@en ;
+    vann:preferredNamespacePrefix "time"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/2006/time#"^^xsd:anyURI ;
+    voaf:usageInDataset time:_skosplus_dataset_occ .
+
+xml: a voaf:Vocabulary ;
+    rdfs:label "xml Vocabulary"@en ;
+    vann:preferredNamespacePrefix "xml"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/XML/1998/namespace"^^xsd:anyURI ;
+    voaf:usageInDataset xml:_skosplus_dataset_occ .
+
+adms: a voaf:Vocabulary ;
+    rdfs:label "adms Vocabulary"@en ;
+    vann:preferredNamespacePrefix "adms"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
+    voaf:usageInDataset adms:_skosplus_dataset_occ .
+
+csvw: a voaf:Vocabulary ;
+    rdfs:label "csvw Vocabulary"@en ;
+    vann:preferredNamespacePrefix "csvw"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/csvw#"^^xsd:anyURI ;
+    voaf:usageInDataset csvw:_skosplus_dataset_occ .
+
+dcat: a voaf:Vocabulary ;
+    rdfs:label "DCAT Vocabulary"@en ;
+    vann:preferredNamespacePrefix "dcat"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
+    voaf:usageInDataset dcat:_skosplus_dataset_occ .
+
+prof: a voaf:Vocabulary ;
+    rdfs:label "prof Vocabulary"@en ;
+    vann:preferredNamespacePrefix "prof"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/dx/prof/"^^xsd:anyURI ;
+    voaf:usageInDataset prof:_skosplus_dataset_occ .
+
+odrl: a voaf:Vocabulary ;
+    rdfs:label "odrl Vocabulary"@en ;
+    vann:preferredNamespacePrefix "odrl"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/odrl/2/"^^xsd:anyURI ;
+    voaf:usageInDataset odrl:_skosplus_dataset_occ .
+
+org: a voaf:Vocabulary ;
+    rdfs:label "org Vocabulary"@en ;
+    vann:preferredNamespacePrefix "org"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/org#"^^xsd:anyURI ;
+    voaf:usageInDataset org:_skosplus_dataset_occ .
+
+prov: a voaf:Vocabulary ;
+    rdfs:label "W3C Provenance Ontology"@en ;
+    vann:preferredNamespacePrefix "prov"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/prov#"^^xsd:anyURI ;
+    voaf:usageInDataset prov:_skosplus_dataset_occ .
+
+sh: a voaf:Vocabulary ;
+    rdfs:label "Shapes Constraint Language (SHACL)"@en ;
+    vann:preferredNamespacePrefix "sh"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+    voaf:usageInDataset sh:_skosplus_dataset_occ .
+
+sosa: a voaf:Vocabulary ;
+    rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"@en ;
+    vann:preferredNamespacePrefix "sosa"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/sosa/"^^xsd:anyURI ;
+    voaf:usageInDataset sosa:_skosplus_dataset_occ .
+
+ssn: a voaf:Vocabulary ;
+    rdfs:label "ssn Vocabulary"@en ;
+    vann:preferredNamespacePrefix "ssn"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/ns/ssn/"^^xsd:anyURI ;
+    voaf:usageInDataset ssn:_skosplus_dataset_occ .
+
+<http://www.wikidata.org/entity/Q121810372> rdfs:label "geospatial data"@en .
+
+foaf: a voaf:Vocabulary ;
+    rdfs:label "Friend Of A Friend Ontology"@en ;
+    vann:preferredNamespacePrefix "foaf"^^xsd:string ;
+    vann:preferredNamespaceUri "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+    voaf:usageInDataset foaf:_skosplus_dataset_occ .
+
+foaf:Person rdfs:label "Person"@en .
+
+brick: a voaf:Vocabulary ;
+    rdfs:label "brick Vocabulary"@en ;
+    vann:preferredNamespacePrefix "brick"^^xsd:string ;
+    vann:preferredNamespaceUri "https://brickschema.org/schema/Brick#"^^xsd:anyURI ;
+    voaf:usageInDataset brick:_skosplus_dataset_occ .
+
+schema: a voaf:Vocabulary ;
+    rdfs:label "schema Vocabulary"@en ;
+    vann:preferredNamespacePrefix "schema"^^xsd:string ;
+    vann:preferredNamespaceUri "https://schema.org/"^^xsd:anyURI ;
+    voaf:usageInDataset schema:_skosplus_dataset_occ .
+
+wgs: a voaf:Vocabulary ;
+    rdfs:label "wgs Vocabulary"@en ;
+    vann:preferredNamespacePrefix "wgs"^^xsd:string ;
+    vann:preferredNamespaceUri "https://www.w3.org/2003/01/geo/wgs84_pos#"^^xsd:anyURI ;
+    voaf:usageInDataset wgs:_skosplus_dataset_occ .
+
+rdfs: a voaf:Vocabulary ;
+    rdfs:label "The RDF Schema vocabulary (RDFS)"@en ;
+    vann:preferredNamespacePrefix "rdfs"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    voaf:usageInDataset rdfs:_skosplus_dataset_occ .
+
+owl: a voaf:Vocabulary ;
+    rdfs:label "Web Ontology Language 2 Vocabulary"@en ;
+    vann:preferredNamespacePrefix "owl"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+    voaf:usageInDataset owl:_skosplus_dataset_occ .
+
+skos: a voaf:Vocabulary ;
+    rdfs:label "skos Vocabulary"@en ;
+    vann:preferredNamespacePrefix "skos"^^xsd:string ;
+    vann:preferredNamespaceUri "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+    voaf:usageInDataset skos:_skosplus_dataset_occ .
+
+<http://skosplus.net/skos-light/skosplus_dataset> a void:Dataset,
+        adms:Asset ;
+    rdfs:label "skosplus_dataset"@en ;
+    vext:averageLiteralLength 21 ;
+    vext:averageObjectIRILength 44 ;
+    vext:averagePropertyIRILength 44 ;
+    vext:averageSubjectIRILength 44 ;
+    vext:datatypes 0 ;
+    vext:distinctBlankNodes 0 ;
+    vext:distinctIRIReferences 103 ;
+    vext:distinctLiterals 13 ;
+    vext:distinctRDFNodes 116 ;
+    vext:languages 1 ;
+    vext:propertyClasses 0 ;
+    dc:language <http://www.lexvo.org/page/iso639-1/en> ;
+    dcterms:modified "2024-04-08T11:42:49"^^xsd:dateTime ;
+    dcterms:subject <http://dbpedia.org/resource/Location>,
+        <http://dbpedia.org/resource/OGC_GeoSPARQL>,
+        <http://dbpedia.org/resource/Time>,
+        <http://www.wikidata.org/entity/Q121810372>,
+        foaf:Person ;
+    dcterms:title "skosplus_dataset"@en ;
+    vann:preferredNamespacePrefix "skosplus"^^xsd:string ;
+    vann:preferredNamespaceUri "http://skosplus.net/skos-light/"^^xsd:anyURI ;
+    void:classPartition <http://skosplus.net/skos-light/skosplus_dataset_Concept>,
+        <http://skosplus.net/skos-light/skosplus_dataset_ConceptScheme>,
+        <http://skosplus.net/skos-light/skosplus_dataset_Label>,
+        <http://skosplus.net/skos-light/skosplus_dataset_StructualConcept>,
+        <http://skosplus.net/skos-light/skosplus_dataset_SymmetricProperty>,
+        <http://skosplus.net/skos-light/skosplus_dataset_TransitiveProperty>,
+        <http://skosplus.net/skos-light/skosplus_dataset_Vocabulary> ;
+    void:classes 9 ;
+    void:dataDump <https://SKOSplus.github.io/skos-light/index.ttl> ;
+    void:distinctObjects 56 ;
+    void:distinctSubjects 36 ;
+    void:entities 13 ;
+    void:feature <http://www.w3.org/ns/formats/RDFa>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 11 ;
+    void:propertyPartition <http://skosplus.net/skos-light/skosplus_dataset_comment>,
+        <http://skosplus.net/skos-light/skosplus_dataset_domain>,
+        <http://skosplus.net/skos-light/skosplus_dataset_equivalentClass>,
+        <http://skosplus.net/skos-light/skosplus_dataset_hasType>,
+        <http://skosplus.net/skos-light/skosplus_dataset_isDefinedBy>,
+        <http://skosplus.net/skos-light/skosplus_dataset_label>,
+        <http://skosplus.net/skos-light/skosplus_dataset_range>,
+        <http://skosplus.net/skos-light/skosplus_dataset_subClassOf>,
+        <http://skosplus.net/skos-light/skosplus_dataset_subPropertyOf>,
+        <http://skosplus.net/skos-light/skosplus_dataset_type>,
+        <http://skosplus.net/skos-light/skosplus_dataset_versionIRI> ;
+    void:triples 146 ;
+    void:uriSpace "http://skosplus.net/skos-light/"^^xsd:string ;
+    void:vocabulary vext:,
+        dcam:,
+        dcmitype:,
+        dc:,
+        dcterms:,
+        qb:,
+        vann:,
+        voaf:,
+        void:,
+        doap:,
+        geo:,
+        rdf:,
+        rdfs:,
+        xsd:,
+        owl:,
+        skos:,
+        time:,
+        xml:,
+        adms:,
+        csvw:,
+        dcat:,
+        prof:,
+        odrl:,
+        org:,
+        prov:,
+        sh:,
+        sosa:,
+        ssn:,
+        foaf:,
+        brick:,
+        schema:,
+        wgs: ;
+    dcat:distribution <http://skosplus.net/skos-light/skosplus_dataset_dist_ttl> ;
+    dcat:keyword "Location"@en,
+        "OGC GeoSPARQL"@en,
+        "Person"@en,
+        "Q121810372"@en,
+        "Time"@en ;
+    dcat:landingPage <https://SKOSplus.github.io/skos-light> ;
+    foaf:homepage <https://SKOSplus.github.io/skos-light> ;
+    foaf:page <https://SKOSplus.github.io/skos-light/index.html> .
+

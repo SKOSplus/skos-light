@@ -1,0 +1,15 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://skosplus.net/skos-light/hasSubLabel> a owl:ObjectProperty,
+        owl:TransitiveProperty,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "has sub label"@en ;
+    dc:license <> ;
+    void:inDataset <http://skosplus.net/skos-light/skosplus_dataset> ;
+    rdfs:subPropertyOf skos:narrower .
+

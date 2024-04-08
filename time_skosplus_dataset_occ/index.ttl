@@ -1,0 +1,11 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns1: <http://purl.org/vocommons/voaf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://skosplus.net/skos-light/time_skosplus_dataset_occ> a ns1:DatasetOccurrence,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Occurrences of vocabulary http://www.w3.org/2006/time# in skosplus_dataset" ;
+    dc:license <> ;
+    ns1:inDataset <http://skosplus.net/skos-light/skosplus_dataset> .
+

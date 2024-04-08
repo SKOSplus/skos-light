@@ -1,0 +1,103 @@
+@prefix ns1: <http://www.w3.org/ns/solid/terms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl> a <http://www.w3.org/ns/ldp#RDFResource>,
+        ns1:ListedDocument,
+        ns1:TypeIndex ;
+    rdfs:label "Public Type Index"@en ;
+    rdfs:comment "This Document contains a list of links to other Documents, along with the type of data that is to be included in those Documents"@en ;
+    rdfs:member <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#ConceptScheme>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#Label>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#StructualConcept>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#SymmetricProperty>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#TransitiveProperty>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#Vocabulary>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#broadMatch>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#broaderTransitive>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#closeMatch>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#exactMatch_suniv0_>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#exactMatch_suniv1_>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasRelatedLabel>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasSubLabel>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasSuperLabel>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#narrowMatch>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#narrowerTransitive>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Concept.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Label.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Vocabulary.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_broader.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_narrower.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_related.html>,
+        <https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#relatedMatch> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#ConceptScheme> ns1:forClass <#> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/ConceptScheme> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#Label> ns1:forClass <http://labeling.link/docs/ls/core#Label> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/Label> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#StructualConcept> ns1:forClass <http://www.w3.org/2004/02/skos2/core#Concept> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/StructualConcept> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#SymmetricProperty> ns1:forClass <#> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/SymmetricProperty> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#TransitiveProperty> ns1:forClass <#> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/TransitiveProperty> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#Vocabulary> ns1:forClass <http://labeling.link/docs/ls/core#Vocabulary> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/Vocabulary> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#broadMatch> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/broadMatch> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#broaderTransitive> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/broaderTransitive> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#closeMatch> ns1:forClass owl:SymmetricProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/closeMatch> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#exactMatch_suniv0_> ns1:forClass owl:SymmetricProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/exactMatch_suniv0_> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#exactMatch_suniv1_> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/exactMatch_suniv1_> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasRelatedLabel> ns1:forClass owl:SymmetricProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/hasRelatedLabel> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasSubLabel> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/hasSubLabel> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#hasSuperLabel> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/hasSuperLabel> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#narrowMatch> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/narrowMatch> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#narrowerTransitive> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/narrowerTransitive> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Concept.html> ns1:forClass <#> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_Concept.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Label.html> ns1:forClass <http://www.w3.org/2004/02/skos2/core#Concept> ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_Label.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_Vocabulary.html> ns1:forClass skos:ConceptScheme ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_Vocabulary.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_broader.html> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_broader.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_narrower.html> ns1:forClass owl:TransitiveProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_narrower.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#nonns_related.html> ns1:forClass owl:SymmetricProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/nonns_related.html> .
+
+<https://SKOSplus.github.io/skos-light/settings/publicTypeIndex.ttl#relatedMatch> ns1:forClass owl:SymmetricProperty ;
+    ns1:instance <https://SKOSplus.github.io/skos-light/relatedMatch> .
+
