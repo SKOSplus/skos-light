@@ -248,6 +248,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="#SKOSlightLabel">SKOSlight Label</a></li>
       <li><a href="#StructuralConcept">Structural Concept</a></li>
       <li><a href="#SKOSlightVocabulary">SKOSlight Vocabulary</a></li>
+      <li><a href="#structuralproperty">structural property</a></li>
       <li><a href="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a></li>
       <li><a href="http://www.w3.org/2004/02/skos2/core#Concept">skoso:Concept</a></li>
     </ul>
@@ -365,6 +366,18 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
+    <div class="entity class" id="structuralproperty">
+        <h3>
+          structural property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#structuralproperty" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://skosplus.net/skos-light/structuralProperty</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="ConceptScheme">
         <h3>
           Concept Scheme<sup title="class" class="sup-c">c</sup>
@@ -437,7 +450,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#hasreleasetype">has release type</a></li>
         <li><a href="#wasreleasedat">was released at</a></li>
         <li><a href="#hasrelatedlabel">has related label</a></li>
         <li><a href="#hassublabel">has sub label</a></li>
@@ -449,7 +461,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#broaderTransitive">broaderTransitive</a></li>
         <li><a href="#closeMatch">closeMatch</a></li>
         <li><a href="#exactMatch">exactMatch</a></li>
-        <li><a href="#hasTopConcept">hasTopConcept</a></li>
         <li><a href="#inScheme">inScheme</a></li>
         <li><a href="#mappingRelation">mappingRelation</a></li>
         <li><a href="#narrowMatch">narrowMatch</a></li>
@@ -460,23 +471,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#semanticRelation">semanticRelation</a></li>
         <li><a href="#topConceptOf">topConceptOf</a></li>
     </ul>
-    <div class="entity property" id="hasreleasetype">
-        <h3>has release type<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasreleasetype" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://labeling.link/docs/ls/core#hasReleaseType</code></td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#<schemeproperties>"><scheme properties></a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="wasreleasedat">
         <h3>was released at<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#wasreleasedat" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -585,8 +579,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#broader">skos:broader</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">skos:mappingRelation</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.w3.org/2004/02/skos/core#broader">skos:broader</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -679,29 +673,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.w3.org/2004/02/skos/core#closeMatch">skos:closeMatch</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasTopConcept">
-        <h3>hasTopConcept<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasTopConcept" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://www.w3.org/2004/02/skos/core#hasTopConcept</code></td>
-            </tr>
-            <tr>
-                <th>Is Defined By</th>
-                <td>
-                    http://www.w3.org/2004/02/skos/core
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#<schemeproperties>"><scheme properties></a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
