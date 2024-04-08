@@ -37,6 +37,30 @@
 #    Object Properties
 #################################################################
 
+###  http://labeling.link/docs/ls/core#hasReleaseType
+ls:hasReleaseType rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :scheme-properties ;
+                  rdfs:label "has release type"@en .
+
+
+###  http://labeling.link/docs/ls/core#released
+ls:released rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :scheme-properties ;
+            rdfs:label "was released at"@en .
+
+
+###  http://labeling.link/docs/ls/core#thumbnail
+ls:thumbnail rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :label-properties ;
+             rdfs:label "has a preferred skos:prefLabel"@en .
+
+
+###  http://skosplus.net/skos-light/label-properties
+:label-properties rdf:type owl:ObjectProperty ;
+                  :hasType :structuralProperty ;
+                  rdfs:label "<label properties>"@en .
+
+
 ###  http://skosplus.net/skos-light/scheme-properties
 :scheme-properties rdf:type owl:ObjectProperty ;
                    :hasType :structuralProperty ;
