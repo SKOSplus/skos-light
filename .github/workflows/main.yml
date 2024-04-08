@@ -9,10 +9,10 @@ jobs:
         name: Ontdoc II      
         with:  
               version: v018 
-              rdffilepath: skos-light.ttl docs/  geocrs False
+              rdffilepath: skos-light.ttl
               docpath: docs/
               prefixns: http://skosplus.net/skos-light/
-              prefixnsshort: geoepsg
+              prefixnsshort: skosplus
               indexpages: true
               metadatatable: true
               createcollections: false
@@ -20,29 +20,7 @@ jobs:
               createVOWL: true
               preferredlang: en
               ghpages: true
-              ghpagesfolder: data/
-  build:
 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Create Ontology Documentation 🔧
-      run: |
-         sudo apt-get update
-         sudo apt-get install python3 python3-setuptools python3-pip python3-dev  -y
-         sudo apt-get install gcc libpq-dev -y
-         sudo apt-get install doxygen graphviz -y
-         sudo apt-get install python3-venv python3-wheel -y
-         sudo pip3 install pylode
-         cd docs
-         doxygen Doxyfile
-         python3 -m pylode -o skoslight.html ../skos-light.ttl
-         cp ../index.html .
-         mkdir showcase
-         cp -r ../WebContent/* showcase/ 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
          BRANCH: gh-pages
          FOLDER: docs/
