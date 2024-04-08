@@ -15,47 +15,153 @@
                                    rdfs:label "SKOSlight Ontology"@en .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://skosplus.net/skos-light/hasType
+:hasType rdf:type owl:AnnotationProperty ;
+         rdfs:comment "type annotation property to type e.g. structural property, class"@en ;
+         rdfs:label "has type"@en .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://skosplus.net/skos-light/structuralProperty
+:structuralProperty rdf:type rdfs:Datatype ;
+                    rdfs:label "structural property"@en .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
-###  http://skosplus.net/skos-light/member
-:member rdf:type owl:ObjectProperty ;
-        rdfs:label "<member properties>"@en .
+###  http://skosplus.net/skos-light/scheme-properties
+:scheme-properties rdf:type owl:ObjectProperty ;
+                   :hasType :structuralProperty ;
+                   rdfs:label "<scheme properties>"@en .
 
 
-###  http://skosplus.net/skos-light/scheme
-:scheme rdf:type owl:ObjectProperty ;
-        rdfs:label "<scheme properties>"@en .
+###  http://skosplus.net/skos-light/semantic-relation-properties
+:semantic-relation-properties rdf:type owl:ObjectProperty ;
+                              :hasType :structuralProperty ;
+                              rdfs:label "<semantic relation properties>"@en .
 
 
-###  http://skosplus.net/skos-light/semanticRelation
-:semanticRelation rdf:type owl:ObjectProperty ;
-                  rdfs:label "<semantic relation properties>"@en .
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+skos:broadMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:broader ,
+                                   skos:mappingRelation ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broaderTransitive ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       rdf:type owl:TransitiveProperty ;
+                       rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:mappingRelation ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf skos:closeMatch ;
+                rdf:type owl:SymmetricProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#hasTopConcept
 skos:hasTopConcept rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :scheme .
+                   rdfs:subPropertyOf :scheme-properties ;
+                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :scheme .
+              rdfs:subPropertyOf :scheme-properties ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
 
-###  http://www.w3.org/2004/02/skos/core#member
-skos:member rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :member .
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+skos:mappingRelation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf skos:semanticRelation ;
+                     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
 
-###  http://www.w3.org/2004/02/skos/core#memberList
-skos:memberList rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :member .
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+skos:narrowMatch rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:mappingRelation ,
+                                    skos:narrower ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:narrowerTransitive ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf skos:semanticRelation ;
+                        rdf:type owl:TransitiveProperty ;
+                        rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:semanticRelation ;
+             rdf:type owl:SymmetricProperty ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+skos:relatedMatch rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf skos:mappingRelation ,
+                                     skos:related ;
+                  rdf:type owl:SymmetricProperty ;
+                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#semanticRelation
 skos:semanticRelation rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :semanticRelation .
+                      rdfs:subPropertyOf :semantic-relation-properties ;
+                      rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf skos:inScheme ;
+                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty ;
+              rdfs:comment "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "notation"@en .
 
 
 #################################################################
@@ -80,6 +186,13 @@ ls:Vocabulary rdf:type owl:Class ;
 :Label rdf:type owl:Class ;
        rdfs:subClassOf ls:Label ;
        rdfs:label "SKOSlight Label"@en .
+
+
+###  http://skosplus.net/skos-light/StructualConcept
+:StructualConcept rdf:type owl:Class ;
+                  rdfs:subClassOf skoso:Concept ;
+                  :hasType :StructualConcept ;
+                  rdfs:label "Structural Concept"@en .
 
 
 ###  http://skosplus.net/skos-light/Vocabulary
