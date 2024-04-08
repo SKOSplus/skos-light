@@ -55,6 +55,27 @@ ls:released rdf:type owl:ObjectProperty ;
             rdfs:label "was released at"@en .
 
 
+###  http://skosplus.net/skos-light/hasRelatedLabel
+:hasRelatedLabel rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf skos:related ;
+                 rdf:type owl:SymmetricProperty ;
+                 rdfs:label "has related label"@en .
+
+
+###  http://skosplus.net/skos-light/hasSubLabel
+:hasSubLabel rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:narrower ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:label "has sub label"@en .
+
+
+###  http://skosplus.net/skos-light/hasSuperLabel
+:hasSuperLabel rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:label "has super label"@en .
+
+
 ###  http://skosplus.net/skos-light/scheme-properties
 :scheme-properties rdf:type owl:ObjectProperty ;
                    :hasType :structuralProperty ;
