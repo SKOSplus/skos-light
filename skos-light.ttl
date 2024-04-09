@@ -28,6 +28,10 @@
 #    Datatypes
 #################################################################
 
+###  http://purl.org/dc/terms/LinguisticSystem
+terms:LinguisticSystem rdf:type rdfs:Datatype .
+
+
 ###  http://skosplus.net/skos-light/structuralProperty
 :structuralProperty rdf:type rdfs:Datatype .
 
@@ -48,7 +52,7 @@ ls:released rdf:type owl:ObjectProperty ;
 
 ###  http://skosplus.net/skos-light/hasRelatedLabel
 :hasRelatedLabel rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf skos:related ;
+                 rdfs:subPropertyOf rdfs:seeAlso ;
                  rdf:type owl:SymmetricProperty ;
                  rdfs:label "has related label"@en .
 
@@ -77,6 +81,13 @@ ls:released rdf:type owl:ObjectProperty ;
 :semantic-relation-properties rdf:type owl:ObjectProperty ;
                               :hasType :structuralProperty ;
                               rdfs:label "<semantic relation properties>"@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:related ;
+             rdfs:comment "Further information about the subject resource."@en ;
+             rdfs:label "seeAlso"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#broadMatch
@@ -183,10 +194,72 @@ skos:topConceptOf rdf:type owl:ObjectProperty ;
 
 ###  http://labeling.link/docs/ls/core#thumbnail
 ls:thumbnail rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :label-properties ;
+             rdfs:subPropertyOf skos:prefLabel ;
              rdfs:domain skoso:Concept ;
              rdfs:range xsd:string ;
              rdfs:label "has a preferred skos:prefLabel"@en .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :vocabulary-properties ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                  rdfs:label "Description"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+terms:identifier rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :vocabulary-properties ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "An unambiguous reference to the resource within a given context. Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."@en ;
+                 rdfs:label "Identifier"@en .
+
+
+###  http://purl.org/dc/terms/language
+terms:language rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :vocabulary-properties ;
+               rdfs:domain owl:Thing ;
+               rdfs:range terms:LinguisticSystem ;
+               rdfs:comment "A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag."@en ;
+               rdfs:label "Language"@en .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :vocabulary-properties ;
+            rdfs:domain owl:Thing ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "A name given to the resource."@en ;
+            rdfs:label "Title"@en .
+
+
+###  http://skosplus.net/skos-light/description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf skos:scopeNote ;
+             rdfs:domain :Label ;
+             rdfs:range xsd:string ;
+             rdfs:label "Beschreibung"@de ,
+                        "description"@en .
+
+
+###  http://skosplus.net/skos-light/identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf skos:notation ;
+            rdfs:domain :Label ;
+            rdfs:range xsd:string ;
+            rdfs:label "identifier"@en .
+
+
+###  http://skosplus.net/skos-light/identifierLabel
+:identifierLabel rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf ls:thumbnail ;
+                 rdfs:domain :Label ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "Bezeichner"@de ,
+                            "identifier label"@en .
 
 
 ###  http://skosplus.net/skos-light/label-properties
@@ -195,13 +268,85 @@ ls:thumbnail rdf:type owl:DatatypeProperty ;
                   rdfs:label "<label properties>"@en .
 
 
+###  http://skosplus.net/skos-light/translation
+:translation rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf skos:prefLabel ;
+             rdfs:domain :Label ;
+             rdfs:range xsd:string ;
+             rdfs:label "translation"@en ,
+                        "Übersetzung"@de .
+
+
+###  http://skosplus.net/skos-light/vocabulary-properties
+:vocabulary-properties rdf:type owl:DatatypeProperty ;
+                       :hasType :structuralProperty ;
+                       rdfs:label "<vocabulary properties>"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyDescription
+:vocabularyDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf terms:description ;
+                       rdfs:domain :Vocabulary ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Vokabular Beschreibung"@de ,
+                                  "vocabulary description"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyIdentifier
+:vocabularyIdentifier rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf terms:identifier ;
+                      rdfs:domain :Vocabulary ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "Vokabular Identifier"@de ,
+                                 "vocabulary identifier"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyLanguage
+:vocabularyLanguage rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf terms:language ;
+                    rdfs:domain :Vocabulary ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "Vokabular Sprache"@de ,
+                               "vocabulary language"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyTitle
+:vocabularyTitle rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf terms:title ;
+                 rdfs:domain :Vocabulary ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "Vokabular Titlel"@de ,
+                            "vocabulary title"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#notation
 skos:notation rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf skos:prefLabel ;
               rdfs:domain skoso:Concept ;
               rdfs:range xsd:string ;
               rdfs:comment "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
               rdfs:label "notation"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :label-properties ;
+               rdfs:domain skoso:Concept ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The preferred lexical label for a resource, in a given language"@en ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "preferred label"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :label-properties ;
+               rdfs:domain skoso:Concept ;
+               rdfs:range xsd:string ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "A note that helps to clarify the meaning and/or the use of a concept."@en ,
+                          "scope note"@en .
 
 
 #################################################################
