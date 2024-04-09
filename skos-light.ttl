@@ -448,6 +448,11 @@ ls:Vocabulary rdf:type owl:Class ;
                   "Label"@en .
 
 
+###  http://skosplus.net/skos-light/Source
+:Source rdf:type owl:Class ;
+        rdfs:subClassOf rdfs:Resource .
+
+
 ###  http://skosplus.net/skos-light/StructualConcept
 :StructualConcept rdf:type owl:Class ;
                   rdfs:subClassOf skos:Concept ;
@@ -464,6 +469,11 @@ ls:Vocabulary rdf:type owl:Class ;
 
 ###  http://skosplus.net/skos-light/structuralProperty
 :structuralProperty rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class ;
+              rdfs:label "Resource"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
