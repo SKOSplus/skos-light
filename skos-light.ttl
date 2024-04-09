@@ -16,7 +16,6 @@
                                    <http://purl.org/dc/elements/1.1/description> "A lighweight SKOS ontology for non SKOS experts."@en ;
                                    <http://purl.org/dc/elements/1.1/licence> <http://creativecommons.org/licenses/by/4.0/> ;
                                    <http://purl.org/dc/elements/1.1/title> "SKOSlight Ontology"@en ;
-                                   rdfs:label "SKOSlight Ontology"@en ;
                                    owl:versionInfo "v0.1" .
 
 #################################################################
