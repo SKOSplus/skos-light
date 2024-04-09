@@ -28,6 +28,10 @@
 #    Datatypes
 #################################################################
 
+###  http://purl.org/dc/terms/LicenseDocument
+terms:LicenseDocument rdf:type rdfs:Datatype .
+
+
 ###  http://purl.org/dc/terms/LinguisticSystem
 terms:LinguisticSystem rdf:type rdfs:Datatype .
 
@@ -48,6 +52,21 @@ owl:Thing rdf:type rdfs:Datatype .
 ls:released rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :scheme-properties ;
             rdfs:label "was released at"@en .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :generic-properties ;
+              rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+              rdfs:range owl:Thing ;
+              rdfs:comment "An entity responsible for making the resource. Recommended practice is to identify the creator with a URI. If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+              rdfs:label "Creator"@en .
+
+
+###  http://skosplus.net/skos-light/generic-properties
+:generic-properties rdf:type owl:ObjectProperty ;
+                    :hasType :structuralProperty ;
+                    rdfs:label "<generic properties>"@en .
 
 
 ###  http://skosplus.net/skos-light/hasRelatedLabel
@@ -200,6 +219,15 @@ ls:thumbnail rdf:type owl:DatatypeProperty ;
              rdfs:label "has a preferred skos:prefLabel"@en .
 
 
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf :vocabulary-properties ;
+                                          rdfs:domain owl:Thing ;
+                                          rdfs:range rdfs:Literal ;
+                                          rdfs:comment "An entity primarily responsible for making the resource. Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          rdfs:label "Creator"@en .
+
+
 ###  http://purl.org/dc/terms/description
 terms:description rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :vocabulary-properties ;
@@ -225,6 +253,15 @@ terms:language rdf:type owl:DatatypeProperty ;
                rdfs:range terms:LinguisticSystem ;
                rdfs:comment "A language of the resource. Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag."@en ;
                rdfs:label "Language"@en .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :vocabulary-properties ;
+              rdfs:domain owl:Thing ;
+              rdfs:range terms:LicenseDocument ;
+              rdfs:comment "A legal document giving official permission to do something with the resource. Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
+              rdfs:label "License"@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -283,6 +320,14 @@ terms:title rdf:type owl:DatatypeProperty ;
                        rdfs:label "<vocabulary properties>"@en .
 
 
+###  http://skosplus.net/skos-light/vocabularyCreatorString
+:vocabularyCreatorString rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> ;
+                         rdfs:domain :Vocabulary ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "vocabulary creator string"@en .
+
+
 ###  http://skosplus.net/skos-light/vocabularyDescription
 :vocabularyDescription rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf terms:description ;
@@ -308,6 +353,22 @@ terms:title rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:string ;
                     rdfs:label "Vokabular Sprache"@de ,
                                "vocabulary language"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyLicenseLink
+:vocabularyLicenseLink rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf terms:license ;
+                       rdfs:domain :Vocabulary ;
+                       rdfs:range xsd:anyURI ;
+                       rdfs:label "vocabulary license link"@en .
+
+
+###  http://skosplus.net/skos-light/vocabularyLicenseString
+:vocabularyLicenseString rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf terms:license ;
+                         rdfs:domain :Vocabulary ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "vocabulary license string"@en .
 
 
 ###  http://skosplus.net/skos-light/vocabularyTitle
@@ -353,6 +414,12 @@ skos:scopeNote rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://labeling.link/docs/ls/core#Agent
+ls:Agent rdf:type owl:Class ;
+         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+         rdfs:label "A Labeling System Agent"@en .
+
+
 ###  http://labeling.link/docs/ls/core#Label
 ls:Label rdf:type owl:Class ;
          rdfs:subClassOf skoso:Concept ;
@@ -365,6 +432,13 @@ ls:Vocabulary rdf:type owl:Class ;
               rdfs:subClassOf skos:ConceptScheme ;
               rdfs:isDefinedBy <https://skosplus.github.io/labelingsystem-ontology/ls-core/> ;
               rdfs:label "Labeling System Vocabulary"@en .
+
+
+###  http://skosplus.net/skos-light/Actor
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+       rdfs:label "Actor"@en ,
+                  "Akteur"@de .
 
 
 ###  http://skosplus.net/skos-light/Label
@@ -387,11 +461,8 @@ ls:Vocabulary rdf:type owl:Class ;
 
 
 ###  http://skosplus.net/skos-light/structuralProperty
-:structuralProperty rdf:type owl:Class ;
-                    owl:equivalentClass owl:Thing .
+:structuralProperty rdf:type owl:Class .
 
-
-###  http://www.w3.org/2002/07/owl#Thing
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
@@ -405,6 +476,36 @@ skoso:Concept rdf:type owl:Class ;
               rdfs:comment "An idea or notion; a unit of thought."@en ;
               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
               rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+                                  rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."@en ;
+                                  rdfs:label "Agent"@en .
+
+
+###  http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                   rdfs:comment "Person agents are people."@en ;
+                                   rdfs:label "Person"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:comment """Agent - An agent (eg. person, group, software or physical artifact).
+
+The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
+
+The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots."""@en ;
+                                  rdfs:label "Agent"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf ls:Agent ;
+                                   rdfs:label "Person"@en .
 
 
 #################################################################
