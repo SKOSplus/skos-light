@@ -11,11 +11,37 @@
 
 <http://skosplus.net/skos-light/> rdf:type owl:Ontology ;
                                    owl:versionIRI <http://skosplus.net/skos-light/> ;
-                                   rdfs:label "SKOSlight Ontology"@en .
+                                   <http://purl.org/dc/elements/1.1/created> "2024-04-09" ;
+                                   <http://purl.org/dc/elements/1.1/creator> "Florian Thiery (LEIZA), Lasse Mempel-Länger (LEIZA)"@en ;
+                                   <http://purl.org/dc/elements/1.1/description> "A lighweight SKOS ontology for non SKOS experts."@en ;
+                                   <http://purl.org/dc/elements/1.1/licence> <http://creativecommons.org/licenses/by/4.0/> ;
+                                   <http://purl.org/dc/elements/1.1/title> "SKOSlight Ontology"@en ;
+                                   rdfs:label "SKOSlight Ontology"@en ;
+                                   owl:versionInfo "v0.1" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/licence
+<http://purl.org/dc/elements/1.1/licence> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
 
 ###  http://skosplus.net/skos-light/hasType
 :hasType rdf:type owl:AnnotationProperty ;
@@ -228,9 +254,7 @@ ls:thumbnail rdf:type owl:DatatypeProperty ;
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:DatatypeProperty ;
                                           rdfs:subPropertyOf :vocabulary-properties ;
                                           rdfs:domain owl:Thing ;
-                                          rdfs:range rdfs:Literal ;
-                                          rdfs:comment "An entity primarily responsible for making the resource. Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
-                                          rdfs:label "Creator"@en .
+                                          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/description
@@ -563,6 +587,10 @@ The Agent class is useful in a few places in FOAF where Person would have been o
 #################################################################
 #    Annotations
 #################################################################
+
+<http://purl.org/dc/elements/1.1/creator> rdfs:label "Creator"@en ;
+                                          rdfs:comment "An entity primarily responsible for making the resource. Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en .
+
 
 owl:Thing rdfs:label "Thing"@en .
 
