@@ -465,7 +465,9 @@ ls:Vocabulary rdf:type owl:Class ;
 
 ###  http://skosplus.net/skos-light/Source
 :Source rdf:type owl:Class ;
-        rdfs:subClassOf rdfs:Resource .
+        rdfs:subClassOf <http://vocab.getty.edu/aat/300404764> ;
+        rdfs:label "Quelle"@de ,
+                   "Source"@en .
 
 
 ###  http://skosplus.net/skos-light/StructualConcept
@@ -484,6 +486,14 @@ ls:Vocabulary rdf:type owl:Class ;
 
 ###  http://skosplus.net/skos-light/structuralProperty
 :structuralProperty rdf:type owl:Class .
+
+
+###  http://vocab.getty.edu/aat/300404764
+<http://vocab.getty.edu/aat/300404764> rdf:type owl:Class ;
+                                       rdfs:subClassOf rdfs:Resource ;
+                                       rdfs:comment "The originating cause or substance of some material thing or physical agency, or the conceptual inspiration for a conceptual thing."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/page/aat/300404764> ;
+                                       rdfs:label "sources (general concept)"@en .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
