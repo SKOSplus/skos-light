@@ -55,12 +55,6 @@ owl:Thing rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://labeling.link/docs/ls/core#released
-ls:released rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :scheme-properties ;
-            rdfs:label "was released at"@en .
-
-
 ###  http://purl.org/dc/terms/creator
 terms:creator rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :generic-properties ;
@@ -73,7 +67,6 @@ terms:creator rdf:type owl:ObjectProperty ;
 
 ###  http://skosplus.net/skos-light/generic-properties
 :generic-properties rdf:type owl:ObjectProperty ;
-                    :hasType :structuralProperty ;
                     rdfs:label "<generic properties>"@en .
 
 
@@ -106,13 +99,11 @@ terms:creator rdf:type owl:ObjectProperty ;
 
 ###  http://skosplus.net/skos-light/scheme-properties
 :scheme-properties rdf:type owl:ObjectProperty ;
-                   :hasType :structuralProperty ;
                    rdfs:label "<scheme properties>"@en .
 
 
 ###  http://skosplus.net/skos-light/semantic-relation-properties
 :semantic-relation-properties rdf:type owl:ObjectProperty ;
-                              :hasType :structuralProperty ;
                               rdfs:label "<semantic relation properties>"@en .
 
 
@@ -291,6 +282,7 @@ terms:title rdf:type owl:DatatypeProperty ;
 ###  http://skosplus.net/skos-light/alternativeLabel
 :alternativeLabel rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf skos:altLabel ;
+                  :skosLightMainEntity "true"^^xsd:boolean ;
                   rdfs:label "alternative label"@en ,
                              "alternativer Bezeichner"@de .
 
@@ -300,6 +292,7 @@ terms:title rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf skos:scopeNote ;
              rdfs:domain :Label ;
              rdfs:range xsd:string ;
+             :skosLightMainEntity "true"^^xsd:boolean ;
              rdfs:label "Beschreibung"@de ,
                         "description"@en .
 
@@ -309,6 +302,7 @@ terms:title rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf skos:notation ;
             rdfs:domain :Label ;
             rdfs:range xsd:string ;
+            :skosLightMainEntity "true"^^xsd:boolean ;
             rdfs:label "identifier"@en .
 
 
@@ -317,13 +311,13 @@ terms:title rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf ls:thumbnail ;
                  rdfs:domain :Label ;
                  rdfs:range xsd:string ;
-                 rdfs:label "Bezeichner"@de ,
-                            "identifier label"@en .
+                 :skosLightMainEntity "true"^^xsd:boolean ;
+                 rdfs:label "identifier label"@en ,
+                            "präferierter Bezeichner"@de .
 
 
 ###  http://skosplus.net/skos-light/label-properties
 :label-properties rdf:type owl:DatatypeProperty ;
-                  :hasType :structuralProperty ;
                   rdfs:label "<label properties>"@en .
 
 
@@ -332,13 +326,13 @@ terms:title rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf skos:prefLabel ;
              rdfs:domain :Label ;
              rdfs:range xsd:string ;
+             :skosLightMainEntity "true"^^xsd:boolean ;
              rdfs:label "translation"@en ,
                         "Übersetzung"@de .
 
 
 ###  http://skosplus.net/skos-light/vocabulary-properties
 :vocabulary-properties rdf:type owl:DatatypeProperty ;
-                       :hasType :structuralProperty ;
                        rdfs:label "<vocabulary properties>"@en .
 
 
@@ -347,6 +341,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> ;
                          rdfs:domain :Vocabulary ;
                          rdfs:range xsd:string ;
+                         :skosLightMainEntity "true"^^xsd:boolean ;
                          rdfs:label "vocabulary creator string"@en .
 
 
@@ -355,6 +350,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf terms:description ;
                        rdfs:domain :Vocabulary ;
                        rdfs:range xsd:string ;
+                       :skosLightMainEntity "true"^^xsd:boolean ;
                        rdfs:label "Vokabular Beschreibung"@de ,
                                   "vocabulary description"@en .
 
@@ -364,6 +360,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf terms:identifier ;
                       rdfs:domain :Vocabulary ;
                       rdfs:range xsd:string ;
+                      :skosLightMainEntity "true"^^xsd:boolean ;
                       rdfs:label "Vokabular Identifier"@de ,
                                  "vocabulary identifier"@en .
 
@@ -373,6 +370,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf terms:language ;
                     rdfs:domain :Vocabulary ;
                     rdfs:range xsd:string ;
+                    :skosLightMainEntity "true"^^xsd:boolean ;
                     rdfs:label "Vokabular Sprache"@de ,
                                "vocabulary language"@en .
 
@@ -382,6 +380,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf terms:license ;
                        rdfs:domain :Vocabulary ;
                        rdfs:range xsd:anyURI ;
+                       :skosLightMainEntity "true"^^xsd:boolean ;
                        rdfs:label "vocabulary license link"@en .
 
 
@@ -390,6 +389,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf terms:license ;
                          rdfs:domain :Vocabulary ;
                          rdfs:range xsd:string ;
+                         :skosLightMainEntity "true"^^xsd:boolean ;
                          rdfs:label "vocabulary license string"@en .
 
 
@@ -398,6 +398,7 @@ terms:title rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf terms:title ;
                  rdfs:domain :Vocabulary ;
                  rdfs:range xsd:string ;
+                 :skosLightMainEntity "true"^^xsd:boolean ;
                  rdfs:label "Vokabular Titlel"@de ,
                             "vocabulary title"@en .
 
@@ -472,11 +473,6 @@ ls:Vocabulary rdf:type owl:Class ;
                   "Akteur"@de .
 
 
-###  http://skosplus.net/skos-light/GenericClasses
-:GenericClasses rdf:type owl:Class ;
-                rdfs:label "<Generic Classes>"@en .
-
-
 ###  http://skosplus.net/skos-light/Label
 :Label rdf:type owl:Class ;
        rdfs:subClassOf ls:Label ;
@@ -506,11 +502,6 @@ ls:Vocabulary rdf:type owl:Class ;
             :skosLightMainEntity "true"^^xsd:boolean ;
             rdfs:label "Vocabulary"@en ,
                        "Vokabular"@de .
-
-
-###  http://skosplus.net/skos-light/structuralProperty
-:structuralProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :GenericClasses .
 
 
 ###  http://vocab.getty.edu/aat/300404764
@@ -573,10 +564,6 @@ The Agent class is useful in a few places in FOAF where Person would have been o
 #################################################################
 #    Annotations
 #################################################################
-
-:structuralProperty :skosLightMainEntity "true"^^xsd:boolean ;
-                    rdfs:label "structural property"@en .
-
 
 owl:Thing rdfs:label "Thing"@en .
 
