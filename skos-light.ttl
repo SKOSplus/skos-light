@@ -24,6 +24,13 @@
          rdfs:label "has type"@en .
 
 
+###  http://skosplus.net/skos-light/skosLightMainEntity
+:skosLightMainEntity rdf:type owl:AnnotationProperty ;
+                     rdfs:label "skosLight main entity"@en ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:domain owl:Thing .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -59,6 +66,7 @@ terms:creator rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :generic-properties ;
               rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
               rdfs:range owl:Thing ;
+              :skosLightMainEntity "true"^^xsd:boolean ;
               rdfs:comment "An entity responsible for making the resource. Recommended practice is to identify the creator with a URI. If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
               rdfs:label "Creator"@en .
 
@@ -73,6 +81,8 @@ terms:creator rdf:type owl:ObjectProperty ;
 :hasRelatedLabel rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf rdfs:seeAlso ;
                  rdf:type owl:SymmetricProperty ;
+                 :skosLightMainEntity "hat related Bezeichner"@de ,
+                                      "true"@de ;
                  rdfs:label "has related label"@en .
 
 
@@ -80,6 +90,8 @@ terms:creator rdf:type owl:ObjectProperty ;
 :hasSubLabel rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf skos:narrower ;
              rdf:type owl:TransitiveProperty ;
+             :skosLightMainEntity "hat Tochter-Bezeichner"@de ,
+                                  "true"@de ;
              rdfs:label "has sub label"@en .
 
 
@@ -87,7 +99,9 @@ terms:creator rdf:type owl:ObjectProperty ;
 :hasSuperLabel rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                rdf:type owl:TransitiveProperty ;
-               rdfs:label "has super label"@en .
+               :skosLightMainEntity "true"^^xsd:boolean ;
+               rdfs:label "has super label"@en ,
+                          "hat Mutter-Bezeichner"@de .
 
 
 ###  http://skosplus.net/skos-light/scheme-properties
@@ -105,6 +119,7 @@ terms:creator rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/2000/01/rdf-schema#seeAlso
 rdfs:seeAlso rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf skos:related ;
+             rdf:type owl:SymmetricProperty ;
              rdfs:comment "Further information about the subject resource."@en ;
              rdfs:label "seeAlso"@en .
 
@@ -452,13 +467,20 @@ ls:Vocabulary rdf:type owl:Class ;
 ###  http://skosplus.net/skos-light/Actor
 :Actor rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+       :skosLightMainEntity "true"^^xsd:boolean ;
        rdfs:label "Actor"@en ,
                   "Akteur"@de .
+
+
+###  http://skosplus.net/skos-light/GenericClasses
+:GenericClasses rdf:type owl:Class ;
+                rdfs:label "<Generic Classes>"@en .
 
 
 ###  http://skosplus.net/skos-light/Label
 :Label rdf:type owl:Class ;
        rdfs:subClassOf ls:Label ;
+       :skosLightMainEntity "true"^^xsd:boolean ;
        rdfs:label "Begriff"@de ,
                   "Label"@en .
 
@@ -466,6 +488,7 @@ ls:Vocabulary rdf:type owl:Class ;
 ###  http://skosplus.net/skos-light/Source
 :Source rdf:type owl:Class ;
         rdfs:subClassOf <http://vocab.getty.edu/aat/300404764> ;
+        :skosLightMainEntity "true"^^xsd:boolean ;
         rdfs:label "Quelle"@de ,
                    "Source"@en .
 
@@ -473,19 +496,21 @@ ls:Vocabulary rdf:type owl:Class ;
 ###  http://skosplus.net/skos-light/StructualConcept
 :StructualConcept rdf:type owl:Class ;
                   rdfs:subClassOf skos:Concept ;
-                  :hasType :StructualConcept ;
+                  :skosLightMainEntity "true"^^xsd:boolean ;
                   rdfs:label "Structural Concept"@en .
 
 
 ###  http://skosplus.net/skos-light/Vocabulary
 :Vocabulary rdf:type owl:Class ;
             rdfs:subClassOf ls:Vocabulary ;
+            :skosLightMainEntity "true"^^xsd:boolean ;
             rdfs:label "Vocabulary"@en ,
                        "Vokabular"@de .
 
 
 ###  http://skosplus.net/skos-light/structuralProperty
-:structuralProperty rdf:type owl:Class .
+:structuralProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :GenericClasses .
 
 
 ###  http://vocab.getty.edu/aat/300404764
@@ -549,7 +574,8 @@ The Agent class is useful in a few places in FOAF where Person would have been o
 #    Annotations
 #################################################################
 
-:structuralProperty rdfs:label "structural property"@en .
+:structuralProperty :skosLightMainEntity "true"^^xsd:boolean ;
+                    rdfs:label "structural property"@en .
 
 
 owl:Thing rdfs:label "Thing"@en .
