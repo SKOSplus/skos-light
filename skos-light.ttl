@@ -444,7 +444,8 @@ ls:Vocabulary rdf:type owl:Class ;
 ###  http://skosplus.net/skos-light/Label
 :Label rdf:type owl:Class ;
        rdfs:subClassOf ls:Label ;
-       rdfs:label "SKOSlight Label"@en .
+       rdfs:label "Begriff"@de ,
+                  "Label"@en .
 
 
 ###  http://skosplus.net/skos-light/StructualConcept
@@ -457,7 +458,8 @@ ls:Vocabulary rdf:type owl:Class ;
 ###  http://skosplus.net/skos-light/Vocabulary
 :Vocabulary rdf:type owl:Class ;
             rdfs:subClassOf ls:Vocabulary ;
-            rdfs:label "SKOSlight Vocabulary"@en .
+            rdfs:label "Vocabulary"@en ,
+                       "Vokabular"@de .
 
 
 ###  http://skosplus.net/skos-light/structuralProperty
