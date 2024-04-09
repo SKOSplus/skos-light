@@ -214,7 +214,7 @@ skos:topConceptOf rdf:type owl:ObjectProperty ;
 ###  http://labeling.link/docs/ls/core#thumbnail
 ls:thumbnail rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf skos:prefLabel ;
-             rdfs:domain skoso:Concept ;
+             rdfs:domain skos:Concept ;
              rdfs:range xsd:string ;
              rdfs:label "has a preferred skos:prefLabel"@en .
 
@@ -383,7 +383,7 @@ terms:title rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/2004/02/skos/core#notation
 skos:notation rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf skos:prefLabel ;
-              rdfs:domain skoso:Concept ;
+              rdfs:domain skos:Concept ;
               rdfs:range xsd:string ;
               rdfs:comment "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
@@ -393,7 +393,7 @@ skos:notation rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :label-properties ;
-               rdfs:domain skoso:Concept ;
+               rdfs:domain skos:Concept ;
                rdfs:range xsd:string ;
                rdfs:comment "The preferred lexical label for a resource, in a given language"@en ;
                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
@@ -403,7 +403,7 @@ skos:prefLabel rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :label-properties ;
-               rdfs:domain skoso:Concept ;
+               rdfs:domain skos:Concept ;
                rdfs:range xsd:string ;
                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
                rdfs:label "A note that helps to clarify the meaning and/or the use of a concept."@en ,
@@ -422,7 +422,7 @@ ls:Agent rdf:type owl:Class ;
 
 ###  http://labeling.link/docs/ls/core#Label
 ls:Label rdf:type owl:Class ;
-         rdfs:subClassOf skoso:Concept ;
+         rdfs:subClassOf skos:Concept ;
          rdfs:isDefinedBy <https://skosplus.github.io/labelingsystem-ontology/ls-core/> ;
          rdfs:label "Labeling System Label"@en .
 
@@ -449,7 +449,7 @@ ls:Vocabulary rdf:type owl:Class ;
 
 ###  http://skosplus.net/skos-light/StructualConcept
 :StructualConcept rdf:type owl:Class ;
-                  rdfs:subClassOf skoso:Concept ;
+                  rdfs:subClassOf skos:Concept ;
                   :hasType :StructualConcept ;
                   rdfs:label "Structural Concept"@en .
 
@@ -464,18 +464,18 @@ ls:Vocabulary rdf:type owl:Class ;
 :structuralProperty rdf:type owl:Class .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:comment "An idea or notion; a unit of thought."@en ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "Concept"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
                    rdfs:comment "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
                    rdfs:label "Concept Scheme"@en .
-
-
-###  http://www.w3.org/2004/02/skos2/core#Concept
-skoso:Concept rdf:type owl:Class ;
-              rdfs:comment "An idea or notion; a unit of thought."@en ;
-              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-              rdfs:label "Concept"@en .
 
 
 ###  http://www.w3.org/ns/prov#Agent
