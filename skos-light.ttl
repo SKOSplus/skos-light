@@ -273,6 +273,13 @@ terms:title rdf:type owl:DatatypeProperty ;
             rdfs:label "Title"@en .
 
 
+###  http://skosplus.net/skos-light/alternativeLabel
+:alternativeLabel rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf skos:altLabel ;
+                  rdfs:label "alternative label"@en ,
+                             "alternativer Bezeichner"@de .
+
+
 ###  http://skosplus.net/skos-light/description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf skos:scopeNote ;
@@ -380,6 +387,14 @@ terms:title rdf:type owl:DatatypeProperty ;
                             "vocabulary title"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :label-properties ;
+              rdfs:comment "An alternative lexical label for a resource."@en ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "alternative label"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#notation
 skos:notation rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf skos:prefLabel ;
@@ -405,9 +420,9 @@ skos:scopeNote rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :label-properties ;
                rdfs:domain skos:Concept ;
                rdfs:range xsd:string ;
+               rdfs:comment "A note that helps to clarify the meaning and/or the use of a concept."@en ;
                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-               rdfs:label "A note that helps to clarify the meaning and/or the use of a concept."@en ,
-                          "scope note"@en .
+               rdfs:label "scope note"@en .
 
 
 #################################################################
